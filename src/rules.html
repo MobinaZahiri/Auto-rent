@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <title>Legal(Rules)</title>
+  </head>
+  <body class="bg-[#F3F3F3] overflow-x-hidden">
+    <!--#region wrapper -->
+    <div class="wrapper w-full max-w-full mx-auto">
+      <!--#region banner -->
+      <div
+        class="banner w-full h-[280px] md:h-[350px] xl:h-[400px] bg-cover bg-center relative"
+        style="background-image: url('images/bg-car.jpg')"
+      >
+        <!--dark layer -->
+        <div class="w-full h-full bg-black/60 relative">
+          <!--#region header -->
+          <div
+            class="header w-full max-w-full md:max-w-[1224px] h-15 md:h-20 xl:h-24 bg-white mx-auto md:rounded-b-2xl flex justify-between items-center px-4 md:px-6 xl:px-8"
+          >
+            <div
+              class="w-[110px] h-10 md:w-[140px] md:h-[55px] xl:w-[151px] xl:h-[59px]"
+            >
+              <img
+                src="./images/Logo.png"
+                class="w-full h-full object-contain"
+                alt=""
+              />
+            </div>
+
+            <div class="xl:w-[507px] xl:h-7 md:w-[450px] md:h-5 mx-auto">
+              <nav
+                class="xl:w-full xl:h-full flex justify-center xl:gap-x-10 md:w-full md:h-full md:gap-x-7"
+              >
+                <div>
+                  <a
+                    href="#"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >رزرو خودرو</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >خدمات ما</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="blog.html"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >بلاگ</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="../index.html"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >درباره ما</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >تماس با ما</a
+                  >
+                </div>
+                <div
+                  class="md:block hidden xl:w-6 xl:h-6 md:w-3.5 md:h-3.5 cursor-pointer"
+                >
+                  <img class="mt-1" src="./images/search.png" alt="" />
+                </div>
+              </nav>
+            </div>
+
+            <div
+              class="md:block hidden xl:w-[122px] xl:h-10 btn btn-primary btn-sm font-es xl:text-[15px] rounded-lg md:w-[100px] md:h-9 md:text-[12px] bg-[#194BF0] font-normal"
+            >
+              <a href="# " class="block md:mt-2">ورود/ثبت نام</a>
+            </div>
+
+            <!-- mobile menu -->
+            <div x-data="{showSidenav:false}" class="md:hidden">
+              <button
+                @click="showSidenav=true"
+                x-show="!showSidenav"
+                class="absolute top-5 left-3 text-slate-950 rounded-full"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+
+              <nav
+                class="fixed top-0 left-0 z-40 h-screen bg-slate-800 w-30 text-slate-100"
+                x-show="showSidenav"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="-translate-x-64"
+                x-transition:enter-end="translate-x-0"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="translate-x-0"
+                x-transition:leave-end="-translate-x-64"
+                x-cloak
+              >
+                <button
+                  @click="showSidenav=false"
+                  class="mb-6 p-4 hover:text-gray-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+
+                <ul class="space-y-2 text-[15px] text-center">
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >رزرو خودرو</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >خدمات ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="blog.html"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >بلاگ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../index.html"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >درباره ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >تماس با ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="qustions.html"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >سوالات متداول</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >ورود/ثبت‌نام</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[25%]"
+          >
+            <h1
+              class="md:text-[31px] text-center font-es text-[#FDB713] leading-[140%] md:font-bold text-[25px]"
+            >
+              قوانین و مقررات
+            </h1>
+            <h3
+              class="text-[#FFFFFF] flex md:gap-x-1 md:leading-[180%] font-es font-normal md:text-[14px] pr-6 text-[10px] gap-x-1"
+            >
+              اتورنت
+              <svg
+                class="md:mt-1.5 mt-0.5"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="#ffffff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.49965 10.3348C7.40465 10.3348 7.30965 10.2998 7.23465 10.2248L3.97465 6.96477C3.44465 6.43477 3.44465 5.56477 3.97465 5.03477L7.23465 1.77477C7.37965 1.62977 7.61965 1.62977 7.76465 1.77477C7.90965 1.91977 7.90965 2.15977 7.76465 2.30477L4.50465 5.56477C4.26465 5.80477 4.26465 6.19477 4.50465 6.43477L7.76465 9.69477C7.90965 9.83977 7.90965 10.0798 7.76465 10.2248C7.68965 10.2948 7.59465 10.3348 7.49965 10.3348Z"
+                  fill="#D7D7D7"
+                />
+              </svg>
+              قوانین و مقررات
+            </h3>
+          </div>
+        </div>
+        <!--#endregion header -->
+      </div>
+      <!--#endregion banner -->
+      <!--#region content -->
+      <div class="w-full px-6 md:px-12 pt-10 md:pt-14">
+        <div
+          class="w-full max-w-full md:max-w-[1220px] h-auto p-4 md:p-6 bg-white rounded-2xl gap-2.5 mx-auto"
+        >
+          <h1
+            class="font-es text-[#353535] text-[16px] md:text-[20px] xl:text-[24px] font-bold leading-[150%]"
+          >
+            مدارک لازم
+          </h1>
+
+          <div class="w-full h-0.5 md:h-[3px] rounded-sm bg-[#D7D7D7] mt-2">
+            <div class="w-10 h-full md:h-full rounded-sm bg-[#FDB713]"></div>
+          </div>
+
+          <div
+            class="font-es text-[11px] md:text-[13px] xl:text-[14px] leading-[190%] text-[#353535] pt-3"
+          >
+            <p>- ارائه گواهینامه رانندگی با اعتبار حداقل ۶ ماه</p>
+            <p>- ارائه کارت ملی</p>
+            <p>
+              - مدارک شغلی (مانند جواز کسب، اجاره‌نامه، فیش حقوقی یا مدرکی که
+              نشان‌دهنده شغل و محل کار شما باشد)
+            </p>
+            <p>
+              - ارائه سند یا اجاره‌نامه محل سکونت (برای مشتریان ایرانی یا ارائه
+              یک برگ رزرو معتبر هتل برای مشتریان خارجی)
+            </p>
+            <p>- پرداخت مبالغ اجاره که بسته به مدل خودرو متفاوت است.</p>
+          </div>
+        </div>
+        <div
+          class="w-full mt-5 max-w-full md:max-w-[1220px] h-auto p-4 md:p-6 bg-white rounded-2xl gap-2.5 mx-auto"
+        >
+          <h1
+            class="font-es text-[#353535] text-[16px] md:text-[20px] xl:text-[24px] font-bold leading-[150%]"
+          >
+            مدارک لازم برای اجاره خودرو افراد خارجی
+          </h1>
+
+          <div class="w-full h-0.5 md:h-[3px] rounded-sm bg-[#D7D7D7] mt-2">
+            <div class="w-10 h-full md:h-full rounded-sm bg-[#FDB713]"></div>
+          </div>
+
+          <div
+            class="font-es text-[11px] md:text-[13px] xl:text-[14px] leading-[190%] text-[#353535] pt-3"
+          >
+            <p>
+              - کپی از گواهینامه رانندگی کشور محل سکونت و یا گواهینامه
+              بین‌المللی فرد
+            </p>
+            <p>
+              - کپی از پاسپورت برای خودروهای اقتصادی و اصل پاسپورت برای خودروهای
+              لوکس
+            </p>
+            <p>- ارائه بلیط برای تحویل خودرو در فرودگاه امام</p>
+            <p>- پرداخت ضمانت نقدی که بسته به مدل خودرو متفاوت است.</p>
+          </div>
+        </div>
+        <div
+          class="w-full mt-5 max-w-full md:max-w-[1220px] h-auto p-4 md:p-6 bg-white rounded-2xl gap-2.5 mx-auto"
+        >
+          <h1
+            class="font-es text-[#353535] text-[16px] md:text-[20px] xl:text-[24px] font-bold leading-[150%]"
+          >
+            مدارک اجاره خودرو برای شرکت‌ها
+          </h1>
+
+          <div class="w-full h-0.5 md:h-[3px] rounded-sm bg-[#D7D7D7] mt-2">
+            <div class="w-10 h-full md:h-full rounded-sm bg-[#FDB713]"></div>
+          </div>
+
+          <div
+            class="font-es text-[11px] md:text-[13px] xl:text-[14px] leading-[190%] text-[#353535] pt-3"
+          >
+            <p>- مدرک شناسایی مدیر شرکت</p>
+            <p>- ارائه اساسنامه شرکت</p>
+            <p>- دریافت چک شرکت</p>
+            <p>- پرداخت ضمانت نقدی که بسته به مدل خودرو متفاوت است.</p>
+          </div>
+        </div>
+        <div
+          class="w-full md:mt-[23px] mt-5 max-w-full md:max-w-[1220px] h-auto p-4 md:p-6 bg-white rounded-2xl gap-2.5 mx-auto"
+        >
+          <h1
+            class="font-es text-[#353535] text-[16px] md:text-[20px] xl:text-[24px] font-bold leading-[150%]"
+          >
+            انواع بیمه برای انواع خودرو
+          </h1>
+          <div class="w-full h-0.5 md:h-[3px] rounded-sm bg-[#D7D7D7] mt-2">
+            <div class="w-10 h-full md:h-full rounded-sm bg-[#FDB713]"></div>
+          </div>
+          <p
+            class="font-es text-[11px] md:text-[13px] lg:text-[14px] leading-[190%] text-[#353535] pt-3"
+          >
+            شرکت اتورنت برای منطبق شدن با نیازهای مختلف مشتریان دو نوع بیمه
+            پایه و بیمه کامل را برای اجاره خودرو ارائه می‌دهد. هر کدام از این
+            بیمه‌ها باتوجه‌به بوجه و نیاز مشتری، هزینه خسارات را پوشش
+            می‌دهند. بیمه پایه اجاره خودرو در این نوع بیمه که بصورت پیش فرض بر
+            روی تمامی خودروهای اجاره شده دراتورنت وجود دارد، در این نوع بیمه
+            مسئولیت تمامی خسارات و زیان‌ها بر عهده اجاره کننده است.
+          </p>
+        </div>
+        <div
+          class="w-full md:mt-[23px] mt-5 max-w-full md:max-w-[1220px] h-auto mx-auto gap-7 flex justify-between"
+        >
+          <div
+            class="w-full mt-5 max-w-full md:max-w-[598px] h-auto p-4 md:p-6 bg-white rounded-2xl gap-2.5"
+          >
+            <h1
+              class="font-es text-[#353535] text-[16px] md:text-[20px] xl:text-[24px] font-bold leading-[150%]"
+            >
+              مدارک لازم
+            </h1>
+
+            <div class="w-full h-0.5 md:h-[3px] rounded-sm bg-[#D7D7D7] mt-2">
+              <div class="w-10 h-full md:h-full rounded-sm bg-[#FDB713]"></div>
+            </div>
+
+            <div
+              class="font-es text-[11px] md:text-[13px] xl:text-[14px] leading-[190%] text-[#353535] pt-3"
+            >
+              <p>- ارائه گواهینامه رانندگی با اعتبار حداقل ۶ ماه</p>
+              <p>- ارائه کارت ملی</p>
+              <p>
+                - مدارک شغلی (مانند جواز کسب، اجاره‌نامه، فیش حقوقی یا مدرکی که
+                نشان‌دهنده شغل و محل کار شما باشد)
+              </p>
+              <p>
+                - ارائه سند یا اجاره‌نامه محل سکونت (برای مشتریان ایرانی یا
+                ارائه یک برگ رزرو معتبر هتل برای مشتریان خارجی)
+              </p>
+              <p>- پرداخت مبالغ اجاره که بسته به مدل خودرو متفاوت است.</p>
+            </div>
+          </div>
+          <div
+            class="w-full mt-5 max-w-full md:max-w-[598px] h-auto p-4 md:p-6 bg-white rounded-2xl gap-2.5"
+          >
+            <h1
+              class="font-es text-[#353535] text-[16px] md:text-[20px] xl:text-[24px] font-bold leading-[150%]"
+            >
+              بیمه کامل
+            </h1>
+
+            <div class="w-full h-0.5 md:h-[3px] rounded-sm bg-[#D7D7D7] mt-2">
+              <div class="w-10 h-full md:h-full rounded-sm bg-[#FDB713]"></div>
+            </div>
+
+            <div
+              class="font-es text-[11px] md:text-[13px] xl:text-[14px] leading-[190%] text-[#353535] pt-3"
+            >
+              <p>- امداد جاده‌ای گسترده (ERA)</p>
+              <p>- بیمه شخص ثالث (ALI)</p>
+              <p>- تعهد ایمنی خودرو (SSP)</p>
+              <p>- پوشش کامل ناشی از سرقت</p>
+              <p>- پرداخت خسارات جزئی (شیشه، لاستیک، بدنه)</p>
+              <p>- بیمه بدنه با حداقل مسئولیت (LDW)</p>
+              <p>
+                - حداقل معافیت جهت افت قیمت، مبلغ بیمه کامل بصورت روزانه حدود
+                35% کرایه خودرو است.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#endregion content -->
+      <!--#region footer-->
+      <div class="w-full mt-20">
+        <div
+          class="relative overflow-hidden w-full max-w-[1218px] mx-auto bg-[url(/src/images/back-footer.png)] bg-cover bg-center shadow-[0_0_6px_rgba(0,0,0,0.35)] xl:rounded-2xl"
+        >
+          <div
+            class="bg-black/70 w-full min-h-[451px] md:min-h-[451px] lg:min-h-[451px] p-4"
+          >
+            <!-- Top  Boxes -->
+            <div
+              class="w-full max-w-[1120px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center md:items-center gap-4 md:gap-10 border border-[#868686] md:rounded-2xl p-6 mt-4 md:mt-[50px]"
+            >
+              <!-- ITEM 1 -->
+              <div
+                class="flex w-full md:w-[200px] items-center justify-center gap-4 md:gap-5"
+              >
+                <img
+                  class="w-12 h-12 shrink-0"
+                  src="./images/icon-1-footer.png"
+                  alt=""
+                />
+                <div class="flex flex-col text-center md:text-right">
+                  <h4 class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    ارتباط با ما
+                  </h4>
+                  <p
+                    class="font-es text-[16px] leading-[180%] text-[#FFFBFB] whitespace-nowrap"
+                  >
+                    0912-21326545
+                  </p>
+                </div>
+              </div>
+
+              <!-- LINE -->
+              <div
+                class="w-full h-px bg-[#6e6d6d] md:w-0 md:h-8 md:flex md:border md:border-[#6e6d6d]"
+              ></div>
+
+              <!-- ITEM 2 -->
+              <div
+                class="flex w-full md:w-[200px] items-center justify-center gap-4 md:gap-5"
+              >
+                <img
+                  class="w-12 h-12 shrink-0"
+                  src="./images/icon-2-footer.png"
+                  alt=""
+                />
+                <div class="flex flex-col text-center md:text-right">
+                  <h4 class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    ایمیل
+                  </h4>
+                  <p class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    auto@info.com
+                  </p>
+                </div>
+              </div>
+
+              <!-- LINE -->
+              <div
+                class="w-full h-px bg-[#6e6d6d] md:w-0 md:h-8 md:flex md:border md:border-[#6e6d6d]"
+              ></div>
+
+              <!-- ITEM 3 -->
+              <div
+                class="flex w-full md:w-[200px] items-center justify-center gap-4 md:gap-5"
+              >
+                <img
+                  class="w-12 h-12 shrink-0"
+                  src="./images/icon-3-footer.png"
+                  alt=""
+                />
+                <div class="flex flex-col text-center md:text-right">
+                  <h4 class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    آدرس
+                  </h4>
+                  <p class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    تهران - خ شادمان
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Main Footer Content -->
+            <div class="w-full max-w-[1115px] mx-auto mt-4 lg:pr-10">
+              <div
+                class="flex flex-col lg:flex-row justify-between border-b border-[#868686] pb-6"
+              >
+                <div
+                  class="flex flex-col md:flex-col lg:flex-row w-full lg:w-[960px] mx-auto"
+                >
+                  <div class="w-full md:w-full lg:w-[430px] px-4">
+                    <img
+                      class="mb-6 mx-auto sm:mx-0 lg:mb-[26px]"
+                      src="./images/Logo-footer.png"
+                      alt=""
+                    />
+                    <p
+                      class="font-es text-[#FFFFFF] text-[12px] md:text-[14px] leading-[160%] md:leading-[180%] text-justify md:text-justify font-normal"
+                    >
+                      اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن
+                      بزرگترین ناوگان خودرویی متشکل از انواع خودروهای صفر
+                      کیلومتر، اقتصادی تا تجاری در سراسر کشور ایران آماده
+                      خدمت‌رسانی به مشتریان است.
+                    </p>
+                  </div>
+
+                  <div
+                    class="w-full md:w-full lg:w-[180px] py-5 px-4 lg:pr-16 lg:pt-6 h-auto flex flex-col gap-2 md:items-start lg:items-start"
+                  >
+                    <a
+                      href="rules.html"
+                      class="font-es pb-2 md:pb-4 text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      قوانین و مقررات
+                    </a>
+                    <a
+                      href="qustions.html"
+                      class="font-es pb-2 md:pb-4 text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      سوالات متداول
+                    </a>
+                    <a
+                      class="font-es pb-2 md:pb-4 text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      تماس با ما
+                    </a>
+                    <a
+                      class="font-es text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      درباره ما
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full lg:pr-10 sm:p-0 sm:mt-5 lg:w-[539px] relative pt-4 lg:pt-[50px]"
+                >
+                  <p
+                    class="font-es text-[16px] leading-[100%] text-right mb-5 text-[#FFFFFF]"
+                  >
+                    خبرنامه
+                  </p>
+                  <form>
+                    <div class="relative">
+                      <input
+                        type="email"
+                        id="email"
+                        class="block w-full h-10 rounded-md p-3 border border-[#868686] text-heading text-sm shadow-xs placeholder:text-[#C2C2C2] placeholder:font-es"
+                        placeholder="ایمیل خود را وارد کنید"
+                        required
+                      />
+                      <button
+                        type="button"
+                        class="btn btn-ghost absolute end-1 bottom-1 text-[#212121] font-es text-[14px] leading-[180%] bg-[#FDB713] rounded-md w-[66px] h-8 font-semibold text-xs"
+                      >
+                        ارسال
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="w-full max-w-[1170px] mx-auto mt-4 px-4">
+              <div
+                class="flex flex-col md:flex-row justify-center gap-2 items-center text-center"
+              >
+                <img src="./images/cc.png" alt="" />
+                <p class="font-es text-[#9A9A9A] text-[14px] leading-[180%]">
+                  تمامی حقوق این وبسایت متعلق به اتورنت می‌باشد
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#endregion footer-->
+    </div>
+    <!--#endregion wrapper -->
+    <!--script-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <title>Blog</title>
+  </head>
+  <body class="bg-[#F3F3F3] overflow-x-hidden">
+    <!--#region wrapper -->
+    <div class="wrapper w-full max-w-full mx-auto">
+      <!--#region banner -->
+      <div
+        class="banner w-full h-[280px] md:h-[350px] xl:h-[400px] bg-cover bg-center relative"
+        style="background-image: url('images/bg-car.jpg')"
+      >
+        <!--dark layer -->
+        <div class="w-full h-full bg-black/60 relative">
+          <!--#region header -->
+          <div
+            class="header w-full max-w-full md:max-w-[1224px] h-15 md:h-20 xl:h-24 bg-white mx-auto md:rounded-b-2xl flex justify-between items-center px-4 md:px-6 xl:px-8"
+          >
+            <div
+              class="w-[110px] h-10 md:w-[140px] md:h-[55px] xl:w-[151px] xl:h-[59px]"
+            >
+              <img
+                src="./images/Logo.png"
+                class="w-full h-full object-contain"
+                alt=""
+              />
+            </div>
+
+            <div class="xl:w-[507px] xl:h-7 md:w-[450px] md:h-5 mx-auto">
+              <nav
+                class="xl:w-full xl:h-full flex justify-center xl:gap-x-10 md:w-full md:h-full md:gap-x-7"
+              >
+                <div>
+                  <a
+                    href="#"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >رزرو خودرو</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >خدمات ما</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="blog.html"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >بلاگ</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="../index.html"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >درباره ما</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="md:block hidden font-es xl:text-[16px] md:text-[14px] text-[#353535]"
+                    >تماس با ما</a
+                  >
+                </div>
+                <div
+                  class="md:block hidden xl:w-6 xl:h-6 md:w-3.5 md:h-3.5 cursor-pointer"
+                >
+                  <img class="mt-1" src="./images/search.png" alt="" />
+                </div>
+              </nav>
+            </div>
+
+            <div
+              class="md:block hidden xl:w-[122px] xl:h-10 btn btn-primary btn-sm font-es xl:text-[15px] rounded-lg md:w-[100px] md:h-9 md:text-[12px] bg-[#194BF0] font-normal"
+            >
+              <a href="# " class="block md:mt-2">ورود/ثبت نام</a>
+            </div>
+
+            <!-- mobile menu -->
+            <div x-data="{showSidenav:false}" class="md:hidden">
+              <button
+                @click="showSidenav=true"
+                x-show="!showSidenav"
+                class="absolute top-5 left-3 text-slate-950 rounded-full"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </button>
+
+              <nav
+                class="fixed top-0 left-0 z-40 h-screen bg-slate-800 w-30 text-slate-100"
+                x-show="showSidenav"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="-translate-x-64"
+                x-transition:enter-end="translate-x-0"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="translate-x-0"
+                x-transition:leave-end="-translate-x-64"
+                x-cloak
+              >
+                <button
+                  @click="showSidenav=false"
+                  class="mb-6 p-4 hover:text-gray-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+
+                <ul class="space-y-2 text-[15px] text-center">
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >رزرو خودرو</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >خدمات ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="blog.html"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >بلاگ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../index.html"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >درباره ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >تماس با ما</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="qustions.html"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >سوالات متداول</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="font-es block transition duration-400 hover:bg-gray-500 w-full h-10 pt-2"
+                      >ورود/ثبت‌نام</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[25%]"
+          >
+            <h1
+              class="md:text-[31px] font-es text-[#FDB713] leading-[140%] md:font-bold text-[25px] mr-1.5"
+            >
+              مقالات
+            </h1>
+            <h3
+              class="text-[#FFFFFF] flex md:gap-x-1 md:leading-[180%] font-es font-normal md:text-[14px] text-[10px] gap-x-1"
+            >
+              اتورنت
+              <svg
+                class="md:mt-1.5 mt-0.5"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="#ffffff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.49965 10.3348C7.40465 10.3348 7.30965 10.2998 7.23465 10.2248L3.97465 6.96477C3.44465 6.43477 3.44465 5.56477 3.97465 5.03477L7.23465 1.77477C7.37965 1.62977 7.61965 1.62977 7.76465 1.77477C7.90965 1.91977 7.90965 2.15977 7.76465 2.30477L4.50465 5.56477C4.26465 5.80477 4.26465 6.19477 4.50465 6.43477L7.76465 9.69477C7.90965 9.83977 7.90965 10.0798 7.76465 10.2248C7.68965 10.2948 7.59465 10.3348 7.49965 10.3348Z"
+                  fill="#D7D7D7"
+                />
+              </svg>
+              مقالات
+            </h3>
+          </div>
+        </div>
+        <!--#endregion header -->
+      </div>
+      <!--#endregion banner -->
+      <!--#region content -->
+      <div class="w-full px-6 md:px-12 pt-14 md:pt-16">
+        <!--big father-->
+        <div
+          class="w-full max-w-full md:max-w-[1224px] mx-auto flex flex-col lg:flex-row justify-between gap-6 lg:gap-[25px]"
+        >
+          <!--right -->
+          <div class="w-full lg:w-[807px] flex flex-col gap-4">
+            <!--first box-->
+            <div
+              class="flex flex-col md:flex-row justify-between gap-4 md:gap-[25px]"
+            >
+              <!--right box-->
+              <div
+                class="flex-1 h-auto rounded-2xl border border-[#D7D7D7] p-4 gap-2 bg-[#FFFFFF]"
+              >
+                <a href="best.html"><img
+                  src="./images/blog-1.png"
+                  alt=""
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="mt-6">
+                  <h1
+                    class="font-es text-[16px] font-medium leading-[100%] text-right text-[#414141]"
+                  >
+                    بهترین ماشین برای خانواده
+                  </h1>
+                  <p
+                    class="font-es text-[12px] font-normal leading-[180%] text-justify text-[#757575] pt-4"
+                  >
+                    امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی
+                    جوامع به وجود آمده است نیازهای افراد و نحوه دسترسی به آنها
+                    نیز دچار تحولاتی شده ...
+                  </p>
+                </div></a>
+                <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      3دقیقه
+                    </h4>
+                  </div>
+                  <div class="flex gap-1.5 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      1,213
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <!--left box -->
+              <div
+                class="flex-1 h-auto rounded-2xl border border-[#D7D7D7] p-4 gap-2 bg-[#FFFFFF]"
+              >
+                <img
+                  src="./images/blog-2.png"
+                  alt=""
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="mt-6">
+                  <h1
+                    class="font-es text-[16px] font-medium leading-[100%] text-right text-[#414141]"
+                  >
+                    روش های مختلف برای اجاره خودرو
+                  </h1>
+                  <p
+                    class="font-es text-[12px] font-normal leading-[180%] text-justify text-[#757575] pt-4"
+                  >
+                    امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی
+                    جوامع به وجود آمده است نیازهای افراد و نحوه دسترسی به آنها
+                    نیز دچار تحولاتی شده ...
+                  </p>
+                </div>
+                <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      3دقیقه
+                    </h4>
+                  </div>
+                  <div class="flex gap-1.5 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      1,213
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--second box-->
+            <div
+              class="flex flex-col md:flex-row justify-between gap-4 md:gap-[25px]"
+            >
+              <!--right box-->
+              <div
+                class="flex-1 h-auto rounded-2xl border border-[#D7D7D7] p-4 gap-2 bg-[#FFFFFF]"
+              >
+                <img
+                  src="./images/blog-3.png"
+                  alt=""
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="mt-6">
+                  <h1
+                    class="font-es text-[16px] font-medium leading-[100%] text-right text-[#414141]"
+                  >
+                    روش های مختلف برای اجاره خودرو
+                  </h1>
+                  <p
+                    class="font-es text-[12px] font-normal leading-[180%] text-justify text-[#757575] pt-4"
+                  >
+                     امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی
+                    جوامع به وجود آمده است نیازهای افراد و نحوه دسترسی به آنها
+                    نیز دچار تحولاتی شده است.
+                  </p>
+                </div>
+                <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      3دقیقه
+                    </h4>
+                  </div>
+                  <div class="flex gap-1.5 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      1,213
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <!--left box-->
+              <div
+                class="flex-1 h-auto rounded-2xl border border-[#D7D7D7] p-4 gap-2 bg-[#FFFFFF]"
+              >
+                <img
+                  src="./images/blog-4.png"
+                  alt=""
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="mt-6">
+                  <h1
+                    class="font-es text-[16px] font-medium leading-[100%] text-right text-[#414141]"
+                  >
+                    روش های مختلف برای اجاره خودرو
+                  </h1>
+                  <p
+                    class="font-es text-[12px] font-normal leading-[180%] text-justify text-[#757575] pt-4"
+                  >
+                    امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی
+                    جوامع به وجود آمده است نیازهای افراد و نحوه دسترسی به آنها
+                    نیز دچار تحولاتی شده ...
+                  </p>
+                </div>
+                <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      3دقیقه
+                    </h4>
+                  </div>
+                  <div class="flex gap-1.5 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      1,213
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--third box-->
+            <div
+              class="flex flex-col md:flex-row justify-between gap-4 md:gap-[25px]"
+            >
+              <!--right box-->
+              <div
+                class="flex-1 h-auto rounded-2xl border border-[#D7D7D7] p-4 gap-2 bg-[#FFFFFF]"
+              >
+                <img
+                  src="./images/blog-5.png"
+                  alt=""
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="mt-6">
+                  <h1
+                    class="font-es text-[16px] font-medium leading-[100%] text-right text-[#414141]"
+                  >
+                    روش های مختلف برای اجاره خودرو
+                  </h1>
+                  <p
+                    class="font-es text-[12px] font-normal leading-[180%] text-justify text-[#757575] pt-4"
+                  >
+                    امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی
+                    جوامع به وجود آمده است نیازهای افراد و نحوه دسترسی به آنها
+                    نیز دچار تحولاتی شده ...
+                  </p>
+                </div>
+                <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      3دقیقه
+                    </h4>
+                  </div>
+                  <div class="flex gap-1.5 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      1,213
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <!--left box -->
+              <div
+                class="flex-1 h-auto rounded-2xl border border-[#D7D7D7] p-4 gap-2 bg-[#FFFFFF]"
+              >
+                <img
+                  src="./images/blog-6.png"
+                  alt=""
+                  class="w-full h-auto rounded-lg"
+                />
+                <div class="mt-6">
+                  <h1
+                    class="font-es text-[16px] font-medium leading-[100%] text-right text-[#414141]"
+                  >
+                    روش های مختلف برای اجاره خودرو
+                  </h1>
+                  <p
+                    class="font-es text-[12px] font-normal leading-[180%] text-justify text-[#757575] pt-4"
+                  >
+                    امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی
+                    جوامع به وجود آمده است نیازهای افراد و نحوه دسترسی به آنها
+                    نیز دچار تحولاتی شده ...
+                  </p>
+                </div>
+                <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                  <div class="flex gap-1 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      3دقیقه
+                    </h4>
+                  </div>
+                  <div class="flex gap-1.5 items-center">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                        fill="#757575"
+                      />
+                      <path
+                        d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                        fill="#757575"
+                      />
+                    </svg>
+                    <h4
+                      class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                    >
+                      1,213
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--more-->
+            <div class="mt-14 flex justify-center items-center gap-2">
+              <p class="font-es text-[#0C4F96] text-[18px] font-normal">
+                مشاهده همه
+              </p>
+              <img class="w-5 h-5" src="./images/arrow-left.png" alt="" />
+            </div>
+          </div>
+          <!--left sidebar-->
+          <div class="w-full lg:w-[392px] mt-6 lg:mt-0 flex flex-col gap-6">
+            <!--search-->
+            <div
+              class="w-full h-14 bg-[#FFFFFF] rounded-[14px] py-3.5 px-4 flex justify-between"
+            >
+              <p class="text-[12px] font-normal my-auto text-[#9A9A9A] font-es">
+                جستجو در سایت اجاره خودرو اتورنت
+              </p>
+              <svg
+                class="my-auto"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.66683 14.5007C3.90016 14.5007 0.833496 11.434 0.833496 7.66732C0.833496 3.90065 3.90016 0.833984 7.66683 0.833984C11.4335 0.833984 14.5002 3.90065 14.5002 7.66732C14.5002 11.434 11.4335 14.5007 7.66683 14.5007ZM7.66683 1.83398C4.44683 1.83398 1.8335 4.45398 1.8335 7.66732C1.8335 10.8807 4.44683 13.5007 7.66683 13.5007C10.8868 13.5007 13.5002 10.8807 13.5002 7.66732C13.5002 4.45398 10.8868 1.83398 7.66683 1.83398Z"
+                  fill="#9A9A9A"
+                />
+                <path
+                  d="M14.6666 15.1676C14.54 15.1676 14.4133 15.1209 14.3133 15.0209L12.98 13.6876C12.7866 13.4943 12.7866 13.1743 12.98 12.9809C13.1733 12.7876 13.4933 12.7876 13.6866 12.9809L15.02 14.3143C15.2133 14.5076 15.2133 14.8276 15.02 15.0209C14.92 15.1209 14.7933 15.1676 14.6666 15.1676Z"
+                  fill="#9A9A9A"
+                />
+              </svg>
+            </div>
+
+            <!--main latest articles-->
+            <div class="w-full h-auto bg-[#FFFFFF] rounded-[14px] py-4 px-2">
+              <h1 class="font-es text-[#353535] text-[24px] font-bold">
+                آخرین مقالات
+              </h1>
+              <div class="w-[60px] h-0.5 md:h-1 mt-1 bg-[#D79C10]"></div>
+              <div class="flex flex-col gap-3 mt-5">
+                <!--article-1 -->
+                <div
+                  class="w-full border-b border-[#C2C2C2] px-2 py-3 flex items-center gap-3.5"
+                >
+                  <img
+                    src="./images/blog-7.png"
+                    alt=""
+                    class="w-20 h-auto rounded-lg"
+                  />
+                  <div class="flex-1">
+                    <h1 class="font-es text-[#414141] text-[16px]">
+                      نگاهی به Lexus NX
+                    </h1>
+                    <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                      <div class="flex gap-1 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          3دقیقه
+                        </h4>
+                      </div>
+                      <div class="flex gap-1.5 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          1,213
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--article-2 -->
+                <div
+                  class="w-full border-b border-[#C2C2C2] px-2 py-3 flex items-center gap-3.5"
+                >
+                  <img
+                    src="./images/blog-8.png"
+                    alt=""
+                    class="w-20 h-auto rounded-lg"
+                  />
+                  <div class="flex-1">
+                    <h1 class="font-es text-[#414141] text-[16px]">
+                      رونمایی از Lamborgini Urus
+                    </h1>
+                    <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                      <div class="flex gap-1 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          3دقیقه
+                        </h4>
+                      </div>
+                      <div class="flex gap-1.5 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          1,213
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--article-3 -->
+                <div
+                  class="w-full border-b border-[#C2C2C2] px-2 py-3 flex items-center gap-3.5"
+                >
+                  <img
+                    src="./images/blog-9.png"
+                    alt=""
+                    class="w-20 h-auto rounded-lg"
+                  />
+                  <div class="flex-1">
+                    <h1 class="font-es text-[#414141] text-[16px]">
+                      بنتلی Bentayga زیر تیغ تیونینگ منصوری
+                    </h1>
+                    <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                      <div class="flex gap-1 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          3دقیقه
+                        </h4>
+                      </div>
+                      <div class="flex gap-1.5 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          1,213
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--article-4 -->
+                <div class="w-full px-2 py-3 flex items-center gap-3.5">
+                  <img
+                    src="./images/blog-10.png"
+                    alt=""
+                    class="w-20 h-auto rounded-lg"
+                  />
+                  <div class="flex-1">
+                    <h1 class="font-es text-[#414141] text-[16px]">
+                      رونمایی از فراری Roma به تاخیر افتاد
+                    </h1>
+                    <div class="flex justify-start mt-6 gap-4 flex-wrap">
+                      <div class="flex gap-1 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 17.0625C4.5525 17.0625 0.9375 13.4475 0.9375 9C0.9375 4.5525 4.5525 0.9375 9 0.9375C13.4475 0.9375 17.0625 4.5525 17.0625 9C17.0625 13.4475 13.4475 17.0625 9 17.0625ZM9 2.0625C5.175 2.0625 2.0625 5.175 2.0625 9C2.0625 12.825 5.175 15.9375 9 15.9375C12.825 15.9375 15.9375 12.825 15.9375 9C15.9375 5.175 12.825 2.0625 9 2.0625Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M11.7825 11.9478C11.685 11.9478 11.5875 11.9253 11.4975 11.8653L9.17248 10.4778C8.59498 10.1328 8.16748 9.37531 8.16748 8.70781V5.63281C8.16748 5.32531 8.42248 5.07031 8.72998 5.07031C9.03748 5.07031 9.29248 5.32531 9.29248 5.63281V8.70781C9.29248 8.97781 9.51748 9.37531 9.74998 9.51031L12.075 10.8978C12.345 11.0553 12.4275 11.4003 12.27 11.6703C12.1575 11.8503 11.97 11.9478 11.7825 11.9478Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          3دقیقه
+                        </h4>
+                      </div>
+                      <div class="flex gap-1.5 items-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.99994 12.247C7.20744 12.247 5.75244 10.792 5.75244 8.99945C5.75244 7.20695 7.20744 5.75195 8.99994 5.75195C10.7924 5.75195 12.2474 7.20695 12.2474 8.99945C12.2474 10.792 10.7924 12.247 8.99994 12.247ZM8.99994 6.87695C7.82994 6.87695 6.87744 7.82945 6.87744 8.99945C6.87744 10.1695 7.82994 11.122 8.99994 11.122C10.1699 11.122 11.1224 10.1695 11.1224 8.99945C11.1224 7.82945 10.1699 6.87695 8.99994 6.87695Z"
+                            fill="#757575"
+                          />
+                          <path
+                            d="M9.00006 15.7644C6.18006 15.7644 3.51756 14.1144 1.68756 11.2494C0.892559 10.0119 0.892559 7.99437 1.68756 6.74937C3.52506 3.88438 6.18756 2.23438 9.00006 2.23438C11.8126 2.23438 14.4751 3.88438 16.3051 6.74937C17.1001 7.98688 17.1001 10.0044 16.3051 11.2494C14.4751 14.1144 11.8126 15.7644 9.00006 15.7644ZM9.00006 3.35938C6.57756 3.35938 4.26006 4.81438 2.64006 7.35688C2.07756 8.23438 2.07756 9.76437 2.64006 10.6419C4.26006 13.1844 6.57756 14.6394 9.00006 14.6394C11.4226 14.6394 13.7401 13.1844 15.3601 10.6419C15.9226 9.76437 15.9226 8.23438 15.3601 7.35688C13.7401 4.81438 11.4226 3.35938 9.00006 3.35938Z"
+                            fill="#757575"
+                          />
+                        </svg>
+                        <h4
+                          class="font-es text-[14px] font-normal leading-[100%] text-right font-fd text-[#757575]"
+                        >
+                          1,213
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--stickers-->
+            <div class="w-full h-auto bg-white rounded-[14px] py-4 px-4 mt-6">
+              <h1 class="font-es text-[#353535] text-[24px] font-bold">
+                برچسب‌ها
+              </h1>
+              <div class="w-[60px] h-0.5 md:h-1 mt-1 bg-[#D79C10]"></div>
+
+              <!-- container for tags -->
+              <div class="flex flex-wrap gap-2 mt-6">
+                <div class="rounded-[48px] py-2 px-4 bg-[#F3F3F3]">
+                  <h4 class="text-[12px] font-normal font-es text-[#494949]">
+                    اجاره خودرو
+                  </h4>
+                </div>
+                <div class="rounded-[48px] py-2 px-4 bg-[#F3F3F3]">
+                  <h4 class="text-[12px] font-normal font-es text-[#494949]">
+                    مرسدس بنز
+                  </h4>
+                </div>
+                <div class="rounded-[48px] py-2 px-4 bg-[#F3F3F3]">
+                  <h4 class="text-[12px] font-normal font-es text-[#494949]">
+                    ون
+                  </h4>
+                </div>
+                <div class="rounded-[48px] py-2 px-4 bg-[#F3F3F3]">
+                  <h4 class="text-[12px] font-normal font-es text-[#494949]">
+                    بدون راننده
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#endregion content -->
+      <!--#region footer-->
+      <div class="w-full mt-20">
+        <div
+          class="relative overflow-hidden w-full max-w-[1218px] mx-auto bg-[url(/src/images/back-footer.png)] bg-cover bg-center shadow-[0_0_6px_rgba(0,0,0,0.35)] xl:rounded-2xl"
+        >
+          <div
+            class="bg-black/70 w-full min-h-[451px] md:min-h-[451px] lg:min-h-[451px] p-4"
+          >
+            <!-- Top  Boxes -->
+            <div
+              class="w-full max-w-[1120px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center md:items-center gap-4 md:gap-10 border border-[#868686] md:rounded-2xl p-6 mt-4 md:mt-[50px]"
+            >
+              <!-- ITEM 1 -->
+              <div
+                class="flex w-full md:w-[200px] items-center justify-center gap-4 md:gap-5"
+              >
+                <img
+                  class="w-12 h-12 shrink-0"
+                  src="./images/icon-1-footer.png"
+                  alt=""
+                />
+                <div class="flex flex-col text-center md:text-right">
+                  <h4 class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    ارتباط با ما
+                  </h4>
+                  <p
+                    class="font-es text-[16px] leading-[180%] text-[#FFFBFB] whitespace-nowrap font-fd"
+                  >
+                    0912-21326545
+                  </p>
+                </div>
+              </div>
+
+              <!-- LINE -->
+              <div
+                class="w-full h-px bg-[#6e6d6d] md:w-0 md:h-8 md:flex md:border md:border-[#6e6d6d]"
+              ></div>
+
+              <!-- ITEM 2 -->
+              <div
+                class="flex w-full md:w-[200px] items-center justify-center gap-4 md:gap-5"
+              >
+                <img
+                  class="w-12 h-12 shrink-0"
+                  src="./images/icon-2-footer.png"
+                  alt=""
+                />
+                <div class="flex flex-col text-center md:text-right">
+                  <h4 class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    ایمیل
+                  </h4>
+                  <p class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    auto@info.com
+                  </p>
+                </div>
+              </div>
+
+              <!-- LINE -->
+              <div
+                class="w-full h-px bg-[#6e6d6d] md:w-0 md:h-8 md:flex md:border md:border-[#6e6d6d]"
+              ></div>
+
+              <!-- ITEM 3 -->
+              <div
+                class="flex w-full md:w-[200px] items-center justify-center gap-4 md:gap-5"
+              >
+                <img
+                  class="w-12 h-12 shrink-0"
+                  src="./images/icon-3-footer.png"
+                  alt=""
+                />
+                <div class="flex flex-col text-center md:text-right">
+                  <h4 class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    آدرس
+                  </h4>
+                  <p class="font-es text-[16px] leading-[180%] text-[#FFFBFB]">
+                    تهران - خ شادمان
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Main Footer Content -->
+            <div class="w-full max-w-[1115px] mx-auto mt-4 lg:pr-10">
+              <div
+                class="flex flex-col lg:flex-row justify-between border-b border-[#868686] pb-6"
+              >
+                <div
+                  class="flex flex-col md:flex-col lg:flex-row w-full lg:w-[960px] mx-auto"
+                >
+                  <div class="w-full md:w-full lg:w-[430px] px-4">
+                    <img
+                      class="mb-6 mx-auto sm:mx-0 lg:mb-[26px]"
+                      src="./src/images/Logo-footer.png"
+                      alt=""
+                    />
+                    <p
+                      class="font-es text-[#FFFFFF] text-[12px] md:text-[14px] leading-[160%] md:leading-[180%] text-justify md:text-justify font-normal"
+                    >
+                      اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن
+                      بزرگترین ناوگان خودرویی متشکل از انواع خودروهای صفر
+                      کیلومتر، اقتصادی تا تجاری در سراسر کشور ایران آماده
+                      خدمت‌رسانی به مشتریان است.
+                    </p>
+                  </div>
+
+                  <div
+                    class="w-full md:w-full lg:w-[180px] py-5 px-4 lg:pr-16 lg:pt-6 h-auto flex flex-col gap-2 md:items-start lg:items-start"
+                  >
+                    <a
+                      href="./rules.html"
+                      class="font-es pb-2 md:pb-4 text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      قوانین و مقررات
+                    </a>
+                    <a
+                      href="qustions.html"
+                      class="font-es pb-2 md:pb-4 text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      سوالات متداول
+                    </a>
+                    <a
+                      class="font-es pb-2 md:pb-4 text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      تماس با ما
+                    </a>
+                    <a
+                      class="font-es text-[#FFFFFF] text-[12px] md:text-[14px] leading-[100%] md:text-left"
+                    >
+                      درباره ما
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="w-full lg:pr-10 sm:p-0 sm:mt-5 lg:w-[539px] relative pt-4 lg:pt-[50px]"
+                >
+                  <p
+                    class="font-es text-[16px] leading-[100%] text-right mb-5 text-[#FFFFFF]"
+                  >
+                    خبرنامه
+                  </p>
+                  <form>
+                    <div class="relative">
+                      <input
+                        type="email"
+                        id="email"
+                        class="block w-full h-10 rounded-md p-3 border border-[#868686] text-heading text-sm shadow-xs placeholder:text-[#C2C2C2] placeholder:font-es"
+                        placeholder="ایمیل خود را وارد کنید"
+                        required
+                      />
+                      <button
+                        type="button"
+                        class="btn btn-ghost absolute end-1 bottom-1 text-[#212121] font-es text-[14px] leading-[180%] bg-[#FDB713] rounded-md w-[66px] h-8 font-semibold text-xs"
+                      >
+                        ارسال
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="w-full max-w-[1170px] mx-auto mt-4 px-4">
+              <div
+                class="flex flex-col md:flex-row justify-center gap-2 items-center text-center"
+              >
+                <img src="./src/images/cc.png" alt="" />
+                <p class="font-es text-[#9A9A9A] text-[14px] leading-[180%]">
+                  تمامی حقوق این وبسایت متعلق به اتورنت می‌باشد
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#endregion footer-->
+    </div>
+    <!--#region wrapper -->
+    <!--script-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>
